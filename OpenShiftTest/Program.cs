@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace OpenShiftTest
 {
@@ -7,7 +8,11 @@ namespace OpenShiftTest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello OpenShift .net core!!!");
-            Console.ReadLine();
+            while (true)
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine("Running...");
+            }
         }
     }
 }
